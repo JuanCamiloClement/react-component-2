@@ -1,0 +1,52 @@
+@import './src/style/abstract/variables.scss';
+@import './src/style/abstract/mixins.scss';
+
+* {
+    font-family: 'Overpass', sans-serif;
+    text-align: center;
+}
+
+.firstContainer {
+    background-color: $darkBlue;
+}
+
+.under-image {
+    background-color: $mediumBlue;
+    color: $orange;
+    padding: 5px 15px;
+    border-radius: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+img {
+    background-color: $darkBlue;
+}
+
+.text {
+    background-color: $darkBlue;
+}
+
+.text__title {
+    color: $white;
+    background-color: $darkBlue;
+}
+
+.text__paragraph {
+    color: $lightGrey;
+    background-color: $darkBlue;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.mainThankYou {
+    margin: auto;
+    margin-top: 10vh;
+    padding: 30px 20px 30px 20px;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    width: 380px;
+    background-color: $darkBlue;
+    align-items: center;
+}

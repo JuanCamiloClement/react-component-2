@@ -1,0 +1,85 @@
+@import './src/style/abstract/variables.scss';
+@import './src/style/abstract/mixins.scss';
+
+.mainContainer {
+    margin: auto;
+    margin-top: 10vh;
+    width: 380px;
+    border-radius: 25px;
+    background-color: $darkBlue;
+}
+
+.starContainer {
+    @include circleContainer;
+    color: $orange;
+    margin-bottom: 20px;
+}
+
+.fa {
+    background-color: $mediumBlue;
+}
+
+.textSection {
+    background-color: $darkBlue;
+}
+
+.textSection__title {
+    color: $white;
+    margin-bottom: 15px;
+    background-color: $darkBlue;
+}
+
+.textSection__paragraph {
+    color: $lightGrey;
+    font-size: 15px;
+    margin-bottom: 25px;
+    background-color: $darkBlue;
+}
+
+.buttonContainer {
+    background-color: $darkBlue;
+}
+
+.button {
+    width: 100%;
+    padding: 10px;
+    color: $white;
+    display: flex;
+    justify-content: center;
+    border-radius: 20px;
+    background-color: $orange;
+}
+
+.button:hover {
+    background-color: $white;
+    color: $orange;
+}
+
+.numbersContainer {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    background-color: $darkBlue
+}
+
+.numbersContainer__number {
+    @include circleContainer;
+    color: $lightGrey;
+    cursor: pointer;
+}
+
+.numbersContainer__number--full {
+    background-color: $orange;
+    color: $white;
+    cursor: pointer;
+}
+
+.numbersContainer__number:hover {
+    background-color: $orange;
+    color: $white;
+}
+
+.numbersContainer__number:has(+ .numbersContainer__number:hover) {
+    background-color: $mediumGrey;
+    color: $white;
+}

@@ -1,0 +1,11 @@
+@import '../abstract/variables.scss';
+
+* {
+    box-sizing: border-box;
+    background-color: $veryDarkBlue;
+}
+
+form {
+    font-family: 'Overpass', sans-serif;
+    padding: 25px;
+}
