@@ -9,17 +9,26 @@ function App() {
 
   const [ rating,setRating ] = useState(0);
 
-  const handleCaptureRating = (value) => setRating(value);
+  const [ submit,setSubmit] = useState(false);
+
+  const handleCaptureRating = (value) => {
+    setRating(value);
+    value === 0 ? submit : setSubmit(!submit);
+  }
 
   return (
     <>
-      <ThankYou
-        rating = { rating }
-      />
-      <Card 
-        numbers = { numbers }
-        onCaptureRating = { handleCaptureRating }
-      />
+      <article className= { submit ? 'show' : 'no-show'}>
+        <ThankYou
+          rating = { rating }
+        />
+      </article>
+      <article className= { submit ? 'no-show' : 'show'}>
+        <Card 
+          numbers = { numbers }
+          onCaptureRating = { handleCaptureRating }
+        />
+      </article>
     </>
   )
 }
