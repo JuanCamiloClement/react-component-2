@@ -1,12 +1,12 @@
 import './ThankYou.scss';
 
-function ThankYou() {
+function ThankYou({ rating }) {
 
   return (
     <main className='mainThankYou'>
         <section className='firstContainer'>
             <img src="https://raw.githubusercontent.com/makeitrealcamp/top-v30/f13122e703f81da5e00ccb6dd0271c4dda9b6669/challenges/interactive-rating/images/illustration-thank-you.svg" alt="" />
-            <p className='under-image'>You selected __ out of 5</p>
+            <p className='under-image'>You selected { rating } out of 5</p>
         </section>
         <section className='text'>
             <h1 className='text__title'>Thank you!</h1>

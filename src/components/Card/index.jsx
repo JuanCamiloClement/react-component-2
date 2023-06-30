@@ -3,7 +3,7 @@ import { useState } from 'react';
 
 function FormCard(props) {
 
-  const { numbers } = props;
+  const { numbers, onCaptureRating } = props;
 
   const [value,setValue] = useState(0);
 
@@ -15,9 +15,14 @@ function FormCard(props) {
     //setSelected(!selected);
   }
 
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    onCaptureRating(value);
+  }
+
   return (
     <>
-        <form className='mainContainer'>
+        <form onSubmit = { handleSubmit } className='mainContainer'>
 
           <div className='starContainer'>
               <span className="fa fa-star"></span>
