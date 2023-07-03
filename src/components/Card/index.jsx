@@ -7,13 +7,9 @@ function FormCard(props) {
 
   const [value,setValue] = useState(0);
 
-  const [selected,setSelected] = useState('numbersContainer__number');
-
   const handleClick = (event) => {
     const selectedNumber = event.target.textContent;
-    setValue(selectedNumber);
-    const focusedNumber = event.target;
-    setSelected('numbersContainer__number--full');
+    setValue(Number(selectedNumber));
   }
 
   const handleSubmit = (event) => {
@@ -35,7 +31,7 @@ function FormCard(props) {
           <div className='numbersContainer'>
             { numbers.map((element) => {
               return (
-              <p className={ selected } key={ element } onClick={ handleClick }>{ element }</p>
+              <p className={ element <= value ? 'numbersContainer__number--full' : 'numbersContainer__number' } key={ element } onClick={ handleClick }>{ element }</p>
               )}
             )}
           </div>
